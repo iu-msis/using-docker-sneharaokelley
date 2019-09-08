@@ -1,0 +1,139 @@
+  <!doctype html>
+  <html>
+  <head>
+    <title>BookList Page</title>
+    <!--Compiled and minified CSS-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <!--jQuery CDN-->
+      <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+      <!--Compiled and minified JavaScript-->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/project.css">
+  </head>
+  <body class="bodycolor">
+    <div class="container pp">
+    <header>
+  <h1 class="title"><img src="images\companylogo.jpg" width="50">Bloomington Bookstore</h1>
+    </header>
+      <!-- Referred Nav from Tech bootcamp final ISF project -->
+    <nav class="row navbar navbar-default">
+          <div class="navbar-header">
+          	<button class= "navbar-toggle" data-toggle ="collapse"
+          	data-target = "#menu">
+
+          	<span class="icon-bar"></span>
+          	<span class="icon-bar"></span>
+          	<span class="icon-bar"></span>
+
+          	</button>
+          	</div>
+
+          	<div class="collapse navbar-collapse" id="menu">
+              <ul class="nav navbar-nav">
+              	<li>
+              		<a href = index.html > Home  </a>
+
+              	</li>
+              	<li>
+              	    <a href = UserInformation.html > User Information </a>
+              	</li>
+                <li>
+              	    <a href = BookList.html > Book Collection </a>
+              	</li>
+
+          </div>
+         </nav>
+         <h3><strong>Book List</strong> </h3>
+         <table id="booklisttable"class="table">
+           <thead>
+             <tr>
+               <th scope="col">Title</th>
+               <th scope="col">Author</th>
+               <th scope="col">Year Published</th>
+               <th scope="col">Publisher</th>
+                <th scope="col">Page Count</th>
+                 <th scope="col">MSRP</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr>
+               <td scope="row">A Thousand Splendid Suns</td>
+               <td>Khaled Hosseini</td>
+               <td>May 22, 2007</td>
+               <td>Riverhead Books</td>
+               <td>388</td>
+               <td>$12</td>
+             </tr>
+             <tr>
+               <td scope="row">2 States</td>
+               <td>Chetan Bhagat</td>
+               <td>May 22, 2009</td>
+               <td>Rupa Publications</td>
+               <td>341</td>
+               <td>$7</td>
+             </tr>
+             <tr>
+               <td scope="row">The monk who sold his ferrari</td>
+               <td>Robin Sharma</td>
+               <td>April 21, 1999</td>
+               <td>HarperSanFrancisco</td>
+               <td>198</td>
+               <td>$13</td>
+             </tr>
+             <tr>
+               <td scope="row">The white tiger</td>
+               <td>Arvind Adiga</td>
+               <td>March 23, 2008</td>
+               <td>Harper Collins</td>
+               <td>318</td>
+               <td>$10</td>
+             </tr>
+           </tbody>
+         </table>
+
+         <h3><strong>Enter a new book</strong></h3>
+
+         <form action="public\BookList.html">
+
+      <div class="form-group">
+      <label for="exampleFormControlTextarea1">Book Title</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Input Author</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="BookDate">Enter year published</label>
+      <input type="date" id="BookDate" name="BookDate">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Enter Publisher Name</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+    </div>
+
+  <div class="form-group">
+    <label for="PageCount">Enter Page Count</label>
+  <input id="PageCount" type="number" name="PageCount" >
+  </div>
+  <div class="form-group">
+  <!-- Ref lines 121-124--W3 school -->
+  <label for="currency-field">MSRP</label>
+    <input type="text" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+     value="" data-type="currency">
+  </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <hr>
+     <footer>Bloomington Bookstore| Phone : 812-400-4000 | Kirkwood Avenue, Bloomington, IN 47408 </footer>
+  </div>
+  <script src="js/tablesort.min.js"></script>
+<script>
+
+<!--http://tristen.ca/tablesort/demo/-->
+  new Tablesort(document.getElementById('booklisttable'));
+</script>
+  </body>
+  </html>

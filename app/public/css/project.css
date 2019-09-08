@@ -1,0 +1,168 @@
+  .pp{
+    background-color: lightblue;
+  }
+  a:hover {
+      color:firebrick
+  }
+
+  /*main title*/
+  .title {
+
+             background-color: darkgrey;
+             font-family: 'Titillium Web', sans-serif;
+             font-weight: bold;
+             color: black;
+             font-size: 36px;
+             margin: 10px;
+             line-height: 40px;
+             padding: 5px 5px 5px 5%;
+             text-align: left
+
+
+         }
+
+/* for lines 26-36 reffered W3 school */
+
+  .formbutton {
+    float: left;
+    width: 20%;
+
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+
+    border-left: none;
+    cursor: pointer;
+  }
+
+  .column {
+    float: left;
+    width: 33.33%;
+  }
+
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* image styling */
+
+  .bookstoreimage{
+    display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                  width: 70%;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  transition: 0.3s;
+  }
+
+  .bookstoreimage:hover {opacity: 0.7;}
+
+  .bestsellerimage{
+    display: block;
+                  width: 40%;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  transition: 0.3s;
+  }
+
+  .bestsellerimage:hover {opacity: 0.7;}
+
+  .chandlerbingimage{
+    display: block;
+                  width: 40%;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  transition: 0.3s;
+  }
+
+  .chandlerbingimage:hover {opacity: 0.7;}
+
+  /* styling headers */
+
+  h3{
+                 font-family: sans-serif;
+                 background-color: darkgrey;
+                 color: black;
+                 padding: 10px;
+                 border-radius: 5px;
+             }
+             .headers{
+                            font-family: sans-serif;
+                            background-color: darkgrey;
+                            color: black;
+                            padding: 10px;
+                            border-radius: 5px;
+                        }
+
+    .bestsellers{
+
+      font-style: italic;
+      color: black;
+    }
+
+  /*table styling*/
+
+  table {
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  th{
+
+  background-color: lightgrey;
+
+  }
+
+  /*footer*/
+
+  footer {
+              background-color: black;
+              font-weight: bold;
+              color: white;
+              padding: 8px;
+              text-align: center;
+          }
+
+/*table-sort css*/
+/*--http://tristen.ca/tablesort/demo/*/
+
+th[role=columnheader]:not(.no-sort) {
+	cursor: pointer;
+}
+
+th[role=columnheader]:not(.no-sort):after {
+	content: '';
+	float: right;
+	margin-top: 7px;
+	border-width: 0 4px 4px;
+	border-style: solid;
+	border-color: #404040 transparent;
+	visibility: hidden;
+	opacity: 0;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+th[aria-sort=ascending]:not(.no-sort):after {
+	border-bottom: none;
+	border-width: 4px 4px 0;
+}
+
+th[aria-sort]:not(.no-sort):after {
+	visibility: visible;
+	opacity: 0.4;
+}
+
+th[role=columnheader]:not(.no-sort):hover:after {
+	visibility: visible;
+	opacity: 1;
+}
