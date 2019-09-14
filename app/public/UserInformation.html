@@ -1,84 +1,78 @@
-    <!doctype html>
-    <html>
-    <head>
-      <title>User Information Page</title>
-      <!--Compiled and minified CSS-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!--jQuery CDN-->
-        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-        <!--Compiled and minified JavaScript-->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" href="css/project.css">
-    </head>
-    <body>
-      <div class="container pp">
-      <header>
-        <h1 class="title"><img src="images\companylogo.jpg" width="50">Bloomington Bookstore</h1>
-      </header>
-        <!-- Referred Nav from Tech bootcamp final ISF project -->
-      <nav class="row navbar navbar-default">
-            <div class="navbar-header">
-            	<button class= "navbar-toggle" data-toggle ="collapse"
-            	data-target = "#menu">
+      <!doctype html>
+      <html>
+      <head>
+        <title>User Information Page</title>
+        <!--Compiled and minified CSS-->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <!--jQuery CDN-->
+          <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+          <!--Compiled and minified JavaScript-->
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/project.css">
+      </head>
+      <body>
+        <div class="container pp">
+        <header>
+          <h1 class="title"><img src="images\companylogo.jpg" width="50">Bloomington Bookstore</h1>
+        </header>
+          <!-- Referred Nav from Tech bootcamp final ISF project -->
+        <nav class="row navbar navbar-default">
+              <div class="navbar-header">
+              	<button class= "navbar-toggle" data-toggle ="collapse"
+              	data-target = "#menu">
 
-            	<span class="icon-bar"></span>
-            	<span class="icon-bar"></span>
-            	<span class="icon-bar"></span>
+              	<span class="icon-bar"></span>
+              	<span class="icon-bar"></span>
+              	<span class="icon-bar"></span>
 
-            	</button>
-            	</div>
+              	</button>
+              	</div>
 
-            	<div class="collapse navbar-collapse" id="menu">
-                <ul class="nav navbar-nav">
-                	<li>
-                		<a href = index.html > Home  </a>
+              	<div class="collapse navbar-collapse" id="menu">
+                  <ul class="nav navbar-nav">
+                  	<li>
+                  		<a href = index.html > Home  </a>
 
-                	</li>
-                	<li>
-                	    <a href = UserInformation.html > User Information </a>
-                	</li>
-                  <li>
-                	    <a href = BookList.html > Book Collection </a>
-                	</li>
+                  	</li>
+                  	<li>
+                  	    <a href = UserInformation.html > User Information </a>
+                  	</li>
+                    <li>
+                  	    <a href = BookList.html > Book Collection </a>
+                  	</li>
 
-            </div>
-           </nav>
-          <div>
-    <h3> User Information </h3>
-    <p>
-      <!-- <a href="{{user.picture.medium}}"> -->
-        <img :src='user.picture.medium'>
+              </div>
+             </nav>
+            <div>
+      <h3> User Information </h3>
 
-        </a>
-      </p>
-            <div class="container"
-    <div class="row">
-      <div id="maincontent" class="col-md">
-      </div>
-      <div id="userinformation" class="col-md-3 queueView">
-        <a href="{{user.picture.medium}}">
-        <img :src='user.picture.medium' alt="userimage">
-         Name: {{user.name.first}} {{user.name.last}}<br><br>
-         Country: {{user.location.timezone.description}}<br><br>
-         Date of Birth: {{user.dob.date}}<br><br>
-         Age: {{user.dob.age}}<br><br>
-         <!-- Email Address: <a href ="mailto:{{user.email}}@gmail.com" target="_top">{{user.email}}</a> -->
-
-
-
+      <div class="container">
+      <div class="row">
+        <div id="maincontent" class="col-md">
         </div>
-      </div>
+        <div id="userinformation" class="col-md-3 queueView">
+        
+          <img :src='user.picture.large' alt="userimage" class="userimage"><br><br>
+           Name: {{user.name.first}} {{user.name.last}}<br><br>
+           Country: {{user.location.timezone.description}}<br><br>
+           Date of Birth: {{user.dob.date}}<br><br>
+           Age: {{user.dob.age}}<br><br>
+           Email Address: <a href ="mailto:{{user.email}}@gmail.com" target="_top">{{user.email}}</a>
+          </div>
+        </div>
 
-      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- referred https://vuejs.org/v2/api/ for lines 69-71 -->
 
-<script src="js/fetchuserinfo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-            <br>
-            <h5> Image citation </h5>
-             <h6><a href="https://www.stylist.co.uk/life/friends-matthew-perry-chandler-bing-best-funniest-moment-quote-line/69489">Image 3. Chandler Bing-stylist.uk/Friends-Chandler Bing</a></h6>
-            </div>
-            <hr>
-               <footer>Bloomington Bookstore| Phone : 812-400-4000 | Kirkwood Avenue, Bloomington, IN 47408 </footer>
-            </div>
-    </body>
-    </html>
+  <script src="js/fetchuserinfo.js"></script>
+
+              <br>
+              <h5> Image citation </h5>
+               <h6><a href="https://randomuser.me/api">Image 3. User Image</a></h6>
+              </div>
+              <hr>
+                 <footer>Bloomington Bookstore| Phone : 812-400-4000 | Kirkwood Avenue, Bloomington, IN 47408 </footer>
+              </div>
+      </body>
+      </html>
