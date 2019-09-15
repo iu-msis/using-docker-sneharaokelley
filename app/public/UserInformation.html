@@ -50,14 +50,14 @@
       <div class="row">
         <div id="maincontent" class="col-md">
         </div>
-        <div id="userinformation" class="col-md-3 queueView">
-        
-          <img :src='user.picture.large' alt="userimage" class="userimage"><br><br>
-           Name: {{user.name.first}} {{user.name.last}}<br><br>
-           Country: {{user.location.timezone.description}}<br><br>
-           Date of Birth: {{user.dob.date}}<br><br>
-           Age: {{user.dob.age}}<br><br>
-           Email Address: <a href ="mailto:{{user.email}}@gmail.com" target="_top">{{user.email}}</a>
+        <div id="userinformation" class="col-md-3 queueView" v-if="user.results">
+
+          <img :src='user.results[0].picture.large' alt="userimage" class="userimage"><br><br>
+           <strong>Name:</strong> {{user.results[0].name.first}} {{user.results[0].name.last}}<br><br>
+           <strong>Country:</strong> {{user.results[0].location.timezone.description}}<br><br>
+           <strong>Date of Birth:</strong> {{user.results[0].dob.date}}<br><br>
+           <strong>Age:</strong> {{user.results[0].dob.age}}<br><br>
+           <strong>Email Address:</strong> <a :href ="'mailto:${{user.results[0].email}}'" target="_top">{{user.results[0].email}}</a>
           </div>
         </div>
 

@@ -2,12 +2,10 @@ var userInfo = new Vue({
   el: '#userinformation',
   data:{
     user:[
-      {
-        // name:{
-        //   first:'',
-        //   last:''
 
-      }
+        'sneha'
+
+
     ],
 
   },
@@ -15,7 +13,7 @@ var userInfo = new Vue({
     fetchUserInfo(){
       fetch('https://randomuser.me/api')
       .then(response => response.json())
-      .then(json => userInfo.user=json.results[0]);
+      .then(json => userInfo.user=json);
     }
   },
 
