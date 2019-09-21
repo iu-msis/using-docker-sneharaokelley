@@ -57,7 +57,7 @@
            <strong>Country:</strong> {{user.results[0].location.timezone.description}}<br><br>
            <strong>Date of Birth:</strong> {{user.results[0].dob.date}}<br><br>
            <strong>Age:</strong> {{user.results[0].dob.age}}<br><br>
-           <strong>Email Address:</strong> <a :href ="'mailto:${{user.results[0].email}}'" target="_top">{{user.results[0].email}}</a>
+           <strong>Email Address:</strong> <a :href ="'mailto:${{user.results[0].email}}'" target="_top">{{user.results[0].email}}</a><br>
 
            <form @submit.prevent="fetchUserInfo">
              <button type="submit" class="btn btn-primary">New User</button>
